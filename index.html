@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Vidmeme</title>
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<style type="text/css">
+			body {
+				margin: 0;
+				background-color: #17191a; /* #1d1f21 with 20% black */
+				font-family: "Roboto Condensed", sans-serif;
+				font-size: 18px;
+				color: #fff;
+				text-align: center;
+			}
+
+			#sidebar::-webkit-scrollbar {
+			    width: 8px
+			}
+			 
+			#sidebar::-webkit-scrollbar-track {
+				background-color: #1d1f21; /* #30343F with 20% black */
+			}
+			 
+			#sidebar::-webkit-scrollbar-thumb {
+				background-color: rgba(255,255,255,0.2);
+			}
+
+			a, a:link, a:hover, a:visited {
+				color: #fff;
+				text-decoration: none;
+			}
+
+			iframe {
+				border: none;
+				width: 100%; height: 100vh;
+			}
+
+			#video {
+				position: fixed; margin: auto;
+				top: 0; left: 0; bottom: 0; right: 200px;
+			}
+
+			#video-placeholder {
+				position: absolute; margin: auto;
+				top: 0; left: 0; bottom: 0; right: 0;
+				font-size: 96px;
+				width: 100%; height: 80px;
+				font-family: "Pacifico", sans-serif;
+				line-height: 64px;
+			}
+
+			#video-credits {
+				position: absolute; margin: auto;
+				bottom: 20px; right: 20px;
+				font-size: 24px;
+				width: 100%; height: 32px;
+				opacity: 0.1;
+				text-align: right;
+			}
+
+			#sidebar {
+				position: fixed; margin: auto;
+				top: 0; right: 0; bottom: 0;
+				width: 200px;
+				background-color: #1d1f21;
+				overflow: auto;
+			}
+
+			.sidebar-item {
+				height: 24px;
+				padding: 16px;
+				background-color: rgba(255,255,255,0.05);
+				margin-bottom: 8px;
+			}
+
+			.sidebar-background {
+				position: absolute;
+				margin: -16px;
+				background-size: cover;
+				background-position: center;
+				width: 200px; height: 56px;
+				z-index: -100;
+				opacity: 0.4;
+			}
+
+			.superior { 
+				background-color: transparent; 
+				font-size: 24px;
+				padding: 8px;
+				font-weight: 700;
+				margin-right: 0;
+				height: 28px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sidebar">
+			<a href="#" onclick="video('random')"><div class="sidebar-item superior">Random</div></a>
+		</div>
+		<div id="video">
+			<div id="video-placeholder">Vidmeme</div>
+			<div id="video-credits">Developed by <a href="https://mxmcube.github.io"><span style="font-weight: 700;">Maki</span></a> with <svg fill="rgba(255,255,255,0.8)" style="margin-bottom: -4px;" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="videos.js"></script>
+		<script type="text/javascript">
+			const sidebarItem = [
+				"<a href='#' onclick='",
+				"'><div class='sidebar-item'><div class='sidebar-background' style='background-image: url(\"",
+				"\")'></div>",
+				"</div></a>"
+			]
+
+			$(document).ready(function() {
+				for (i = 0; i < Object.keys(videos).length; i++) {
+					$("#sidebar").append(
+						sidebarItem[0] + 'change("' + Object.keys(videos)[i] + '")' +
+						sidebarItem[1] + "http://img.youtube.com/vi/" + videos[Object.keys(videos)[i]].id + "/0.jpg" +
+						sidebarItem[2] + videos[Object.keys(videos)[i]].name +
+						sidebarItem[3]
+			    	);
+				}
+			});
+
+			const iframe = [
+				"<iframe src='https://www.youtube.com/embed/",
+				"?rel=0&controls=1&showinfo=0&autoplay=1&start=",
+				"' allowfullscreen></iframe>"
+			]
+
+			function change(video) {
+				$("#video").html(
+					iframe[0] + videos[video].id +
+					iframe[1] + videos[video].start +
+					iframe[2]
+				);
+			}
+
+			function video(video) {
+				if (video == "random") {
+					change(
+						Object.keys(videos)[
+							Math.floor(Math.random() * Object.keys(videos).length)
+						]
+					);
+				} else {
+					change(video);
+				}
+			}
+		</script>
+	</body>
+</html>
