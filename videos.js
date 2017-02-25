@@ -4,5 +4,5 @@ const videos = {
 	"timotei": { id: "b5KH9Z383hE", start: "0", name: "Timotei" },
 	"mariopingpong": { id: "sMKoNBRZM1M", start: "6", name: "Mario Ping Pong" },
 	"louder": { id: "GJ_SHqbtlRY", start: "0", name: "Louder" },
-	"yeahboi": { id: "fvtQYsckLxk", start: "64", name: "Yeah Boi" }
+	"yeahboi": { id: "fvtQYsckLxk", start: "65", name: "Yeah Boi" }
 }
