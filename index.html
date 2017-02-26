@@ -99,7 +99,8 @@
 			#video-container {
 				position: fixed; margin: auto;
 				top: 0; left: 0; bottom: 0; right: 200px;
-				z-index: 2000;
+				z-index: 2000; display: none;
+				background-color: #000;
 			}
 		</style>
 	</head>
@@ -147,7 +148,7 @@
 			]
 
 			function change(video) {
-				$("#video-container").css("background-color", "#000");
+				$("#video-container").css("display", "initial");
 				$("#video-container").html(
 					iframe[0] + videos[video].id +
 					iframe[1] + videos[video].start +
@@ -169,7 +170,7 @@
 
 			function resetVideo() {
 				$("#video-container").html("");
-				$("#video-container").css("background-color", "transparent");
+				$("#video-container").css("display", "none");
 			}
 		</script>
 	</body>
