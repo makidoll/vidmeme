@@ -116,8 +116,12 @@
 		</div>
 		<div id="video-container"></div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="videos.js"></script>
 		<script type="text/javascript">
+			var videos = [];
+			$.getJSON("videos.json", function(data) {
+				videos = data;
+			});
+			
 			const sidebarItem = [
 				"<a href='#' onclick='",
 				"'><div class='sidebar-item'><div class='sidebar-background' style='background-image: url(\"",
