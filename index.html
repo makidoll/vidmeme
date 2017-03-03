@@ -80,7 +80,7 @@
 			.sidebar-background {
 				position: absolute;
 				margin: -16px;
-				background-size: 125% auto;
+				background-size: 130% auto;
 				background-position: center;
 				width: 100%; height: 56px;
 				z-index: -100;
@@ -119,12 +119,26 @@
 		</div>
 		<div id="video-container"></div>
 		<script src="jquery.min.js"></script>
+		<script src="video.db.js"></script>
 		<script type="text/javascript">
-			var videos = [];
-			$.getJSON("videos.json", function(data) {
-				videos = data;
-			});
-			console.log("test");
+    		var randomArray = [];
+
+    		for (i = 0; i < Object.keys(videos).length; i++) {
+    		    randomArray.push(Object.keys(videos)[i]);
+    		}
+
+    		function shuffleArray(array) {
+			    for (var i = array.length - 1; i > 0; i--) {
+			        var j = Math.floor(Math.random() * (i + 1));
+			        var temp = array[i];
+			        array[i] = array[j];
+			        array[j] = temp;
+			    }
+			    return array;
+			}
+
+    		randomArray = shuffleArray(randomArray);
+
 			const sidebarItem = [
 				"<a href='#' onclick='",
 				"'><div class='sidebar-item'><div class='sidebar-background' style='background-image: url(\"",
@@ -133,11 +147,11 @@
 			]
 
 			$(document).ready(function() {
-				for (i = 0; i < Object.keys(videos).length; i++) {
+				for (i = 0; i < randomArray.length; i++) {
 					$("#sidebar").append(
-						sidebarItem[0] + 'change("' + Object.keys(videos)[i] + '")' +
-						sidebarItem[1] + "http://img.youtube.com/vi/" + videos[Object.keys(videos)[i]].id + "/0.jpg" +
-						sidebarItem[2] + videos[Object.keys(videos)[i]].name +
+						sidebarItem[0] + 'change("' + randomArray[i] + '")' +
+						sidebarItem[1] + "http://img.youtube.com/vi/" + videos[randomArray[i]].id + "/0.jpg" +
+						sidebarItem[2] + videos[randomArray[i]].name +
 						sidebarItem[3]
 			    	);
 				}
@@ -158,16 +172,17 @@
 				);
 			}
 
+			var currentVideo = ""; 
+
 			function video(video) {
 				if (video == "random") {
-					change(
-						Object.keys(videos)[
-							Math.floor(Math.random() * Object.keys(videos).length)
-						]
-					);
+					currentVideo = Math.floor(Math.random() * Object.keys(videos).length);
+					change(Object.keys(videos)[currentVideo]);
 				} else {
+					currentVideo = "";
 					change(video);
 				}
+				console.log(currentVideo);
 			}
 
 			function resetVideo() {
