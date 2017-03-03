@@ -67,6 +67,7 @@
 				background-color: #1d1f21;
 				overflow: auto;
 				overflow-x: hidden;
+				z-index: 2000;
 			}
 
 			.sidebar-item {
@@ -79,7 +80,7 @@
 			.sidebar-background {
 				position: absolute;
 				margin: -16px;
-				background-size: cover;
+				background-size: 120% auto;
 				background-position: center;
 				width: 200px; height: 56px;
 				z-index: -100;
@@ -123,13 +124,7 @@
 			$.getJSON("videos.json", function(data) {
 				videos = data;
 			});
-			
-			function randomize(a, b) {
-    			return Math.random() - 0.5;
-			}
-
-			videos.sort(randomize);
-			
+			console.log("test");
 			const sidebarItem = [
 				"<a href='#' onclick='",
 				"'><div class='sidebar-item'><div class='sidebar-background' style='background-image: url(\"",
