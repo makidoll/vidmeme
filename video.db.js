@@ -12,5 +12,5 @@ var videos = {
 	"hihowareya": { "id": "ewKZStzQOYc", "start": "0", "name": "Hi How Are Ya" },
 	"thesixmillion": { "id": "-ZekZbKomFA", "start": "0", "name": "The Six Million" },
 	"nolaunchpad": { "id": "H22CjCq0CTM", "start": "2", "name": "No launchpad" },
-	"kidandbasketball": { "id": "E9Xmg62n8t8", "start": "0", "name": "kid and basketball" }
+	"kidandbasketball": { "id": "E9Xmg62n8t8", "start": "0", "name": "Kid and a basketball" }
 }
