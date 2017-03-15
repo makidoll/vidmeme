@@ -11,5 +11,5 @@ var videos = {
 	"catflower": { "id": "-Z4jx5VMw8M", "start": "9", "name": "Can't Handle Flower" },
 	"hihowareya": { "id": "ewKZStzQOYc", "start": "0", "name": "Hi How Are Ya" },
 	"thesixmillion": { "id": "-ZekZbKomFA", "start": "0", "name": "The Six Million" },
-	"cantaffordlaunchpad": { "id": "H22CjCq0CTM", "start": "0", "name": "Can't afford a launchpad" }
+	"cantaffordlaunchpad": { "id": "H22CjCq0CTM", "start": "0", "name": "Don't have a launchpad" }
 }
