@@ -10,5 +10,6 @@ var videos = {
 	"ppap": { "id": "0E00Zuayv9Q", "start": "13", "name": "PPAP" },
 	"catflower": { "id": "-Z4jx5VMw8M", "start": "9", "name": "Can't Handle Flower" },
 	"hihowareya": { "id": "ewKZStzQOYc", "start": "0", "name": "Hi How Are Ya" },
-	"thesixmillion": { "id": "-ZekZbKomFA", "start": "0", "name": "The Six Million" }
+	"thesixmillion": { "id": "-ZekZbKomFA", "start": "0", "name": "The Six Million" },
+	"cantaffordlaunchpad": { "id": "H22CjCq0CTM", "start": "0", "name": "Can't afford a launchpad" }
 }
