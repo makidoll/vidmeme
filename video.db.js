@@ -12,5 +12,6 @@ var videos = {
 	"hihowareya": { "id": "ewKZStzQOYc", "start": "0", "name": "Hi How Are Ya" },
 	"nolaunchpad": { "id": "H22CjCq0CTM", "start": "2", "name": "No Launchpad" },
 	"kidbasketball": { "id": "E9Xmg62n8t8", "start": "0", "name": "Kid Basketball" },
-	"minediamonds": { "id": "dgha9S39Y6M", "start": "92", "name": "Mine Diamonds" }
+	"minediamonds": { "id": "dgha9S39Y6M", "start": "92", "name": "Mine Diamonds" },
+	"vsauce": { "id": "eveK7v2cX80", "start": "92", "name": "Hey Vsauce, Robot Here" }
 }
