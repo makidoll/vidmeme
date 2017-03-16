@@ -10,7 +10,7 @@ var videos = {
 	"ppap": { "id": "0E00Zuayv9Q", "start": "14", "name": "PPAP" },
 	"catflower": { "id": "-Z4jx5VMw8M", "start": "9", "name": "Can't Handle Flower" },
 	"hihowareya": { "id": "ewKZStzQOYc", "start": "0", "name": "Hi How Are Ya" },
-	"thesixmillion": { "id": "-ZekZbKomFA", "start": "0", "name": "The Six Million" },
-	"nolaunchpad": { "id": "H22CjCq0CTM", "start": "2", "name": "No launchpad" },
-	"kidandbasketball": { "id": "E9Xmg62n8t8", "start": "0", "name": "Kid and a basketball" }
+	"nolaunchpad": { "id": "H22CjCq0CTM", "start": "2", "name": "No Launchpad" },
+	"kidbasketball": { "id": "E9Xmg62n8t8", "start": "0", "name": "Kid Basketball" },
+	"minediamonds": { "id": "dgha9S39Y6M", "start": "92", "name": "Mine Diamonds" }
 }
