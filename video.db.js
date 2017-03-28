@@ -13,5 +13,5 @@ var videos = {
 	11: { "id": "H22CjCq0CTM", "start": "2", "name": "No Launchpad" },
 	12: { "id": "E9Xmg62n8t8", "start": "0", "name": "Kid Basketball" },
 	13: { "id": "dgha9S39Y6M", "start": "92", "name": "Mine Diamonds" },
-	14: { "id": "eveK7v2cX80", "start": "92", "name": "Vsauce, Robot Here" }
+	14: { "id": "eveK7v2cX80", "start": "0", "name": "Vsauce, Robot Here" }
 }
