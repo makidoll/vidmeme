@@ -1,2 +1,2 @@
 # vidmeme
-I fucking love YouTube memes.
+I love YouTube memes.
