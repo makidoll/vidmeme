@@ -1,4 +1,4 @@
 # Vidmeme
-😂 Memes from YouTube!
+> 😂 Memes from YouTube!
 
-http://meme.maki.cat
+Just visit http://meme.maki.cat!
