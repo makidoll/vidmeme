@@ -1,2 +1,4 @@
-# vidmeme
-I love YouTube memes.
+# Vidmeme
+😂 Memes from YouTube!
+
+http://meme.maki.cat
